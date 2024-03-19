@@ -1,0 +1,4 @@
+{"level":"info","message":"Parameters are valid","service":"user-service"}
+{"level":"info","message":"Parameters are valid","service":"user-service"}
+{"level":"error","message":"Invalid input","service":"user-service"}
+{"level":"error","service":"user-service"}
