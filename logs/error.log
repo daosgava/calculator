@@ -1,2 +1,1 @@
-{"level":"error","message":"Invalid input","service":"user-service"}
-{"level":"error","service":"user-service"}
+{"level":"error","message":{"operation":"add","text":"b is not a number"},"service":"calculator-service"}
