@@ -11,3 +11,17 @@
 {"level":"info","message":{"data":{"num1":20,"num2":2},"operation":"multiply","text":"valid operation"},"service":"calculator-service"}
 {"level":"info","message":{"data":{"num1":20,"num2":2},"operation":"multiply","text":"valid operation"},"service":"calculator-service"}
 {"level":"info","message":{"data":{"num1":20,"num2":5},"operation":"multiply","text":"valid operation"},"service":"calculator-service"}
+{"level":"info","message":{"data":{"num1":20,"num2":5},"operation":"multiply","text":"valid operation"},"service":"calculator-service"}
+{"level":"info","message":{"data":{"num1":20,"num2":2},"operation":"multiply","text":"valid operation"},"service":"calculator-service"}
+{"level":"info","message":{"data":{"num1":20,"num2":2},"operation":"divide","text":"valid operation"},"service":"calculator-service"}
+{"level":"info","message":{"data":{"num1":20,"num2":2},"operation":"add","text":"valid operation"},"service":"calculator-service"}
+{"level":"info","message":{"data":{"num1":20,"num2":2},"operation":"subtract","text":"valid operation"},"service":"calculator-service"}
+{"level":"error","message":{"operation":"subtract","text":"b is not a number"},"service":"calculator-service"}
+{"level":"info","message":{"data":{"num1":20,"num2":2},"operation":"subtract","text":"valid operation"},"service":"calculator-service"}
+{"level":"info","message":{"data":{"num1":20,"num2":0},"operation":"subtract","text":"valid operation"},"service":"calculator-service"}
+{"level":"error","message":{"operation":"divide","text":"division by zero"},"service":"calculator-service"}
+{"level":"error","message":{"operation":"/divide","text":"division by zero"},"service":"calculator-service"}
+{"level":"error","message":{"path":"/divide","text":"division by zero"},"service":"calculator-service"}
+{"level":"error","message":{"method":"GET","text":"division by zero","url":"/divide?a=20&b=0"},"service":"calculator-service"}
+{"level":"info","message":{"method":"GET","text":"valid operation","url":"/divide?a=20&b=2"},"service":"calculator-service"}
+{"level":"info","message":{"method":"GET","text":"valid operation","url":"/divide?a=20&b=10"},"service":"calculator-service"}

@@ -1,1 +1,6 @@
 {"level":"error","message":{"operation":"add","text":"b is not a number"},"service":"calculator-service"}
+{"level":"error","message":{"operation":"subtract","text":"b is not a number"},"service":"calculator-service"}
+{"level":"error","message":{"operation":"divide","text":"division by zero"},"service":"calculator-service"}
+{"level":"error","message":{"operation":"/divide","text":"division by zero"},"service":"calculator-service"}
+{"level":"error","message":{"path":"/divide","text":"division by zero"},"service":"calculator-service"}
+{"level":"error","message":{"method":"GET","text":"division by zero","url":"/divide?a=20&b=0"},"service":"calculator-service"}

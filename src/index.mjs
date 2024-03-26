@@ -1,22 +1,26 @@
 import express from 'express';
 import OperationHandler from './operations.mjs';
-import { port } from './constants.mjs';
+import { port, paths } from './constants.mjs';
 
 const app = express(); 
+// Instantiate OperationHandler
 const operationHandler = new OperationHandler();
 
-// Routes
-app.get('/', (_, res) => {
-    res.status(200).send('Calculator API');
-});
+// Get paths from constants
+const { ADD, SUBTRACT, MULTIPLY, DIVIDE } = paths;
 
-app.get('/add', operationHandler.addition);
+// Define routes
+const routes = {
+    [ADD]: operationHandler.addition,
+    [SUBTRACT]: operationHandler.subtraction,
+    [MULTIPLY]: operationHandler.multiplication,
+    [DIVIDE]: operationHandler.division,
+};
 
-app.get('/subtract', operationHandler.subtraction);
-
-app.get('/multiply', operationHandler.multiplication);
-
-app.get('/divide', operationHandler.division);
+// Register routes
+for (const [route, handler] of Object.entries(routes)) {
+    app.get(route, handler);
+}
 
 app.listen(port, () => {
   console.log(`🐲: This server at http://localhost:${port}, `);

@@ -1,8 +1,9 @@
-import { OPERATION_TYPES } from './constants.mjs';
+import { paths } from './constants.mjs';
 import logger from './logger.mjs';
 
-const { ADD, SUBTRACT, MULTIPLY, DIVIDE } = OPERATION_TYPES;
+const { ADD, SUBTRACT, MULTIPLY, DIVIDE } = paths;
 
+// Define math operations
 const mathOperations = {
     [ADD]: (a, b) => a + b,
     [SUBTRACT]: (a, b) => a - b,
@@ -13,17 +14,21 @@ const mathOperations = {
 class OperationHandler {
 
     validateInputs = (inputA, inputB, operationType = ADD) => {
+        // Convert inputs to numbers
         const num1 = parseInt(inputA);
         const num2 = parseInt(inputB);
 
+        // Validate inputA
         if (isNaN(num1)) {
             throw new Error('a is not a number');
         }
 
+        // Validate inputB
         if (isNaN(num2)) {
             throw new Error('b is not a number');
         }
 
+        // Validate denominator for division
         if (operationType === DIVIDE && num2 === 0) {
             throw new Error('division by zero');
         }
@@ -33,12 +38,16 @@ class OperationHandler {
 
     addition = (req, res) => {
         try {
+            // Validate inputs
             const [num1, num2] = this.validateInputs(req.query.a, req.query.b, ADD);
+            // Perform operation
             const data = mathOperations[ADD](num1, num2);
-            logger.info({ text: 'valid operation', data: { num1, num2 }, operation: ADD });
+            // Log operation
+            logger.info({ text: 'valid operation', url: req.url, method: req.method });
+            // Send response
             res.status(200).send({ data });
         } catch (e) {
-            logger.error({ text: e.message, operation: ADD });
+            logger.error({ text: e.message, url: req.url, method: req.method });
             res.status(500).send(e.message);
         }
     }
@@ -47,10 +56,10 @@ class OperationHandler {
         try {
             const [num1, num2] = this.validateInputs(req.query.a, req.query.b, SUBTRACT);
             const data = mathOperations[SUBTRACT](num1, num2);
-            logger.info({ text: 'valid operation', data: { num1, num2 }, operation: SUBTRACT });
+            logger.info({ text: 'valid operation', url: req.url, method: req.method });
             res.status(200).send({ data });
         } catch (e) {
-            logger.error({ text: e.message, operation: SUBTRACT });
+            logger.error({ text: e.message, url: req.url, method: req.method });
             res.status(500).send(e.message);
         }
     }
@@ -59,10 +68,10 @@ class OperationHandler {
         try {
             const [num1, num2] = this.validateInputs(req.query.a, req.query.b, MULTIPLY);
             const data = mathOperations[MULTIPLY](num1, num2);
-            logger.info({ text: 'valid operation', data: { num1, num2 }, operation: MULTIPLY });
+            logger.info({ text: 'valid operation', url: req.url, method: req.method });
             res.status(200).send({ data });
         } catch (e) {
-            logger.error({ text: e.message, operation: MULTIPLY });
+            logger.error({ text: e.message, url: req.url, method: req.method });
             res.status(500).send(e.message);
         }
     }
@@ -71,10 +80,10 @@ class OperationHandler {
         try {
             const [num1, num2] = this.validateInputs(req.query.a, req.query.b, DIVIDE);
             const data = mathOperations[DIVIDE](num1, num2);
-            logger.info({ text: 'valid operation', data: { num1, num2 }, operation: DIVIDE });
+            logger.info({ text: 'valid operation', url: req.url, method: req.method });
             res.status(200).send({ data });
         } catch (e) {
-            logger.error({ text: e.message, operation: DIVIDE });
+            logger.error({ text: e.message, url: req.url, method: req.method });
             res.status(500).send(e.message);
         }
     }
