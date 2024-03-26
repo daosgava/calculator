@@ -2,7 +2,7 @@
 
 #### Overview
 
-This is a simple Express.js API that provides an addition functionality. It accepts two numbers as query parameters, adds them, and returns the result. The API is designed to be minimalistic, yet it includes basic logging and error handling.
+This API offers basic arithmetic operations—addition, subtraction, multiplication, and division—through HTTP GET requests. Users can perform calculations by providing two numbers as query parameters, receiving results in JSON format. Simple and accessible, it's designed for any application needing essential math functionalities.
 
 #### Getting Started
 
