@@ -1,4 +1,4 @@
-import { operations, OPERATION_TYPES } from './constants.mjs';
+import { OPERATION_TYPES } from './constants.mjs';
 import logger from './logger.mjs';
 
 const { ADD, SUBTRACT, MULTIPLY, DIVIDE } = OPERATION_TYPES;

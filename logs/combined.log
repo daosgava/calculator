@@ -8,3 +8,6 @@
 {"level":"info","message":{"data":{"num1":20,"num2":2},"operation":"subtract","text":"valid operation"},"service":"calculator-service"}
 {"level":"info","message":{"data":{"num1":20,"num2":2},"operation":"divide","text":"valid operation"},"service":"calculator-service"}
 {"level":"info","message":{"data":{"num1":20,"num2":2},"operation":"multiply","text":"valid operation"},"service":"calculator-service"}
+{"level":"info","message":{"data":{"num1":20,"num2":2},"operation":"multiply","text":"valid operation"},"service":"calculator-service"}
+{"level":"info","message":{"data":{"num1":20,"num2":2},"operation":"multiply","text":"valid operation"},"service":"calculator-service"}
+{"level":"info","message":{"data":{"num1":20,"num2":5},"operation":"multiply","text":"valid operation"},"service":"calculator-service"}
