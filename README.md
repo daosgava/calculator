@@ -1,4 +1,4 @@
-### README for Simple Addition API
+### Calculator API
 
 #### Overview
 
