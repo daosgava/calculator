@@ -36,6 +36,36 @@ This is a simple Express.js API that provides an addition functionality. It acce
   - **Success Response:** JSON object containing the result of the addition.
   - **Error Response:** If any of the inputs are invalid, an error message is returned.
 
+- **Subtract Two Numbers**
+
+  - **Endpoint:** `/subtract`
+  - **Method:** `GET`
+  - **Query Parameters:**
+    - `a`: The first number from which you subtract.
+    - `b`: The second number to be subtracted from the first.
+  - **Success Response:** JSON object containing the result of the subtraction.
+  - **Error Response:** If any of the inputs are invalid, an error message is returned.
+
+- **Multiply Two Numbers**
+
+  - **Endpoint:** `/multiply`
+  - **Method:** `GET`
+  - **Query Parameters:**
+    - `a`: The first number to multiply.
+    - `b`: The second number to multiply with the first.
+  - **Success Response:** JSON object containing the result of the multiplication.
+  - **Error Response:** If any of the inputs are invalid, an error message is returned.
+
+- **Divide Two Numbers**
+
+  - **Endpoint:** `/divide`
+  - **Method:** `GET`
+  - **Query Parameters:**
+    - `a`: The numerator.
+    - `b`: The denominator (must not be zero).
+  - **Success Response:** JSON object containing the result of the division.
+  - **Error Response:** If any of the inputs are invalid, an error message is returned, especially if `b` is zero.
+
 #### Example
 
 To add two numbers, navigate to the following URL in your browser or use a tool like `curl`:
